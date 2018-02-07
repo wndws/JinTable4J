@@ -6,14 +6,15 @@ import java.util.UUID;
 
 import agency.werewolf.jintable.player.Player;
 
+/** ゲームクラスです。 **/
 public abstract class Game {
 
-	private UUID uuid;
-	private List<Player> playerList;
+	private final UUID uuid;
+	private final List<Player> playerList;
 	private GameStatus status;
 	private GameRule rule;
 
-	Game(){
+	protected Game(){
 		playerList = new ArrayList<Player>();
 		uuid = UUID.randomUUID();
 	}
